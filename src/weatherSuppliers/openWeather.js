@@ -1,9 +1,9 @@
-import axios from 'axios';
 import _ from 'lodash';
+import BaseService from './baseService';
 
-export default class OpenWeather {
-  constructor(http = axios) {
-    this.http = http;
+export default class OpenWeather extends BaseService {
+  constructor(http) {
+    super(http);
     this.API = 'https://samples.openweathermap.org/data/2.5/weather';
     this.appid = 'b6907d289e10d714a6e88b30761fae22';
   }

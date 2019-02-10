@@ -1,9 +1,9 @@
-import axios from 'axios';
 import _ from 'lodash';
+import BaseService from './baseService';
 
-export default class MetaWeather {
-  constructor(http = axios) {
-    this.http = http;
+export default class MetaWeather extends BaseService {
+  constructor(http) {
+    super(http);
     this.API = 'https://www.metaweather.com/api/location/';
   }
 
