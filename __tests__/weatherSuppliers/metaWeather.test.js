@@ -5,10 +5,10 @@ const secondRequest = 'https://www.metaweather.com/api/location/44418/';
 
 const mockHttp = (request) => {
   if (request === firstRequest) {
-    return Promise.resolve({ data: [{ woeid: 44418 }] });
+    return { data: [{ woeid: 44418 }] };
   }
   if (request === secondRequest) {
-    return Promise.resolve({ data: { consolidated_weather: [{ the_temp: 8 }] } });
+    return { data: { consolidated_weather: [{ the_temp: 8 }] } };
   }
   return null;
 };

@@ -3,7 +3,7 @@ import Weather from '../src';
 const source1 = {
   fetchData: (city) => {
     if (city === 'London') {
-      return Promise.resolve({ data: { temp: 7 } });
+      return { data: { temp: 7 } };
     }
   },
 };
@@ -11,7 +11,7 @@ const source1 = {
 const source2 = {
   fetchData: (city) => {
     if (city === 'Moscow') {
-      return Promise.resolve({ data: { temp: 3 } });
+      return { data: { temp: 3 } };
     }
   },
 };
